@@ -1,0 +1,23 @@
+<!--author rao-->
+<template>
+    <lightning-card title="Welcome to Salesforce" icon-name="standard:account">
+          <div class="greeting">Hello {greet}</div>
+          <lightning-input label="Greeting today" onchange={greetingChangeHandler}></lightning-input>
+    </br>
+          <lightning-input type="checkbox" label="Show my Tag" onchange={showDivHandler}></lightning-input>
+          <template if:true={displaydiv}>
+              <div class="green">I am true</div>
+          </template>
+          <template if:false={displaydiv}>
+              <div class="red">I am false</div>
+          </template>
+        </br>
+            <template iterator:it={citylist}>
+                <p key={it.value}>{it.value}</p>
+            </template>
+            <div style="color: red;background:black;">Below is the example of for:each directive</div>
+            <template for:each={citylist} for:item="city">
+                <p key={city}>{city}</p>
+            </template>
+          </lightning-card>
+</template>
