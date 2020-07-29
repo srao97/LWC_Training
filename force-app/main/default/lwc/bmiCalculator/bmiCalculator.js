@@ -20,4 +20,10 @@ export default class BmiCalculator extends LightningElement {
             this.bmi=undefined;
         }
     }
+    get bmiValue(){
+        if(this.bmi === undefined){
+            return "";
+        }
+        return 'Your Bmi is: ${this.bmi}';
+    }
     }
