@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Testing of Slot">
+        <c-p-test show-room-infom>
+            <lightning-tile label={roomName} slot="roomInfom">
+               <!--<p class="slds-truncate" title={roomCapacity}>Room Capacity:{roomCapacity}</p>-->
+            </lightning-tile>
+        <div> Additional markup will go in unnamed slot</div>
+        </c-p-test>
+    </lightning-card>
+</template>
